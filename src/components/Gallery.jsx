@@ -1,5 +1,5 @@
 const images = [
-    { src: 'gallery/1.jpg', alt: 'Aerotech event photo 1', span: 'col-span-2 row-span-2' },
+    { src: 'gallery/1.jpg', alt: 'Aerotech event photo 1', span: 'md:col-span-2 md:row-span-2' },
     { src: 'gallery/2.jpeg', alt: 'Aerotech event photo 2', span: '' },
     { src: 'gallery/3.jpg', alt: 'Aerotech event photo 3', span: '' },
     { src: 'gallery/4.jpeg', alt: 'Aerotech event photo 4', span: '' },
