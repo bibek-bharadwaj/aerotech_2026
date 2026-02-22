@@ -2,7 +2,7 @@ import SplineScene from './SplineScene';
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 md:px-10 pt-24 md:pt-24 pb-6 overflow-hidden">
+        <section className="relative w-full md:min-h-screen flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 md:px-10 pt-24 md:pt-24 pb-6 overflow-hidden">
             {/* Ambient background elements */}
             <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
                 {/* Faint background text */}
@@ -67,7 +67,7 @@ export default function Hero() {
 
             {/* ─── 3D Spline Scene ─── */}
             <div className="relative z-20 mt-0 md:-mt-[199px] w-full md:max-w-5xl mx-auto animate-fade-in delay-300" style={{ opacity: 0 }}>
-                <div className="w-full aspect-[4/3] md:aspect-[4/3] overflow-hidden">
+                <div className="w-full aspect-square md:aspect-[4/3] overflow-hidden">
                     <SplineScene scene="https://prod.spline.design/ab3TbnMwWnvvEoio/scene.splinecode" />
                 </div>
             </div>
