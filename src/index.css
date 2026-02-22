@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+/* ─── Custom Theme ─── */
+@theme {
+  --font-anton: "Anton", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --color-brand-green: #7BC144;
+  --color-brand-green-dark: #5A9A2F;
+  --color-brand-green-light: #9BD86A;
+  --color-brand-glow: #7BC144;
+  --color-dark: #0a0a0a;
+  --color-dark-surface: #111111;
+  --color-dark-card: #161616;
+  --color-dark-border: #222222;
+}
+
+/* ─── Base Styles ─── */
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Hide Spline watermark */
+  a[href*="spline.design"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  a[href*="spline.design"] * {
+    display: none !important;
+  }
+
+  /* Also hide the Spline logo image */
+  img[alt*="Spline"],
+  img[src*="spline"] {
+    display: none !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    background-color: var(--color-dark);
+    color: #ffffff;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-green);
+    color: #0a0a0a;
+  }
+
+  ::-moz-selection {
+    background-color: var(--color-brand-green);
+    color: #0a0a0a;
+  }
+}
+
+/* ─── Animations ─── */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes line-grow {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+/* Staggered delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .section-padding {
+    padding: 3.5rem 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 7rem 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 8rem 4rem;
+  }
+}
